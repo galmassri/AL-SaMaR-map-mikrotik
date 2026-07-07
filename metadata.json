@@ -1,0 +1,7 @@
+{
+  "name": "ALSaMaR-NET MikroTik Map",
+  "description": "منصة الإدارة والمراقبة المتكاملة لشبكات MikroTik ودمج خطوط ستارلينك ويوزمانجر",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
