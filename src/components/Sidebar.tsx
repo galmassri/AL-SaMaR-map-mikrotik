@@ -1,7 +1,7 @@
 import React from 'react';
-import { LayoutDashboard, Map, Search, Stethoscope, Ticket, Send, Activity, Users } from 'lucide-react';
+import { LayoutDashboard, Map, Search, Stethoscope, Ticket, Send, Activity, Users, Shield, Server } from 'lucide-react';
 
-export type TabType = 'overview' | 'map' | 'discovery' | 'diagnostics' | 'vouchers' | 'telegram' | 'monitoring' | 'subscribers';
+export type TabType = 'overview' | 'map' | 'discovery' | 'diagnostics' | 'vouchers' | 'telegram' | 'monitoring' | 'subscribers' | 'guide' | 'mikrotik-settings';
 
 interface SidebarProps {
   activeTab: TabType;
@@ -16,7 +16,9 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab, activ
     { id: 'discovery' as TabType, label: 'اكتشاف الأجهزة والـ Subnet', icon: Search },
     { id: 'diagnostics' as TabType, label: 'التشخيص الذكي والفحص المتقدم', icon: Stethoscope, badge: activeAlertsCount > 0 ? activeAlertsCount : null },
     { id: 'subscribers' as TabType, label: 'إدارة المشتركين', icon: Users },
+    { id: 'mikrotik-settings' as TabType, label: 'إعدادات ربط ميكروتيك (API)', icon: Server },
     { id: 'vouchers' as TabType, label: 'مبيعات الكروت ويوزمانجر', icon: Ticket },
+    { id: 'guide' as TabType, label: 'دليل ربط ميكروتيك وتثبيت PWA', icon: Shield },
     { id: 'telegram' as TabType, label: 'تكامل تيليجرام والتنبيهات', icon: Send },
     { id: 'monitoring' as TabType, label: 'مراقبة الأداء المباشر والـ Pings', icon: Activity },
   ];

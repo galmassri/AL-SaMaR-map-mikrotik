@@ -9,6 +9,8 @@ import { VouchersView } from './components/VouchersView';
 import { TelegramView } from './components/TelegramView';
 import { LiveMonitoringView } from './components/LiveMonitoringView';
 import { SubscribersView } from './components/SubscribersView';
+import { MikroTikGuideView } from './components/MikroTikGuideView';
+import { MikroTikSettingsView } from './components/MikroTikSettingsView';
 import { RouterDevice, SubnetDevice, DiagnosticAlert, VoucherCard, TelegramLog, SalesRecord, Subscriber } from './types';
 
 export default function App() {
@@ -309,6 +311,12 @@ export default function App() {
                 onTogglePayment={handleTogglePayment}
                 onSendTelegram={handleSendTelegram}
               />
+            )}
+            {activeTab === 'guide' && (
+              <MikroTikGuideView />
+            )}
+            {activeTab === 'mikrotik-settings' && (
+              <MikroTikSettingsView />
             )}
           </div>
         </main>
